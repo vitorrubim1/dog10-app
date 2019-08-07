@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>comprar</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <div class="ion-padding">
+    <ion-item>
+      <ion-label position="floating">
+        DIGITE SEU CEP:
+      </ion-label>
+      <ion-input #cep> </ion-input>
+    </ion-item>
+    <div class="ion-padding">
+      <ion-button color='dark' expand='block' (click)="buscar(cep)"> Buscar </ion-button>
+    </div>
+
+  </div>
+</ion-content>
