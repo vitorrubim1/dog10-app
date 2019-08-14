@@ -7,70 +7,30 @@
 </ion-header>
 
 <ion-content padding class="home">
-  <ion-card>
-    <img src="../assets/imagem1.jpg" />
-    <ion-card-header>
+  <div *ngFor="let hot of hotDogLista">
+    <ion-card>
+      <ion-img src={{hot.image}}></ion-img>
+      <ion-card-header>
+  
+        <ion-card-title> {{hot.titulo}} </ion-card-title>
+        <br>
+        <ion-card-subtitle color="danger">{{hot.preco}}</ion-card-subtitle>
+      </ion-card-header>
+  
+      <ion-card-content>
+        {{hot.descricao}}
+      </ion-card-content>
+      <div class="ion-padding">
+        <ion-button color='dark' expand='block' (click)="detalhes(hot.titulo,hot.preco,hot.image)" >
+          Comprar
+          <ion-icon name="cash" slot="start"></ion-icon>
+        </ion-button>
+      </div>
+    </ion-card>  
+  </div>
+  
+ 
 
-      <ion-card-title>Hot Dog Vegetariano</ion-card-title>
-      <br>
-      <ion-card-subtitle color="danger">R$ 8,00</ion-card-subtitle>
-    </ion-card-header>
-
-    <ion-card-content>
-      Hot Dog com uma dedicação aos vegetarianos e veganos, ótima opção de compra com ingredientes de excelente
-      qualidade.
-    </ion-card-content>
-    <div class="ion-padding">
-      <ion-button color='dark' expand='block' (click)="buscar(cep)">
-        Comprar
-        <ion-icon name="cash" slot="end"></ion-icon>
-      </ion-button>
-    </div>
-  </ion-card>
-
-
-  <!-- Segundo Hot Dog -->
-
-  <ion-card>
-    <img src="../assets/imagem2.jpg" />
-    <ion-card-header>
-
-      <ion-card-title> America Hot Dog </ion-card-title>
-      <br>
-      <ion-card-subtitle color="danger">R$ 12,00</ion-card-subtitle>
-    </ion-card-header>
-
-    <ion-card-content>
-      O Hot Dog é selecionado com os melhores molhos, uma salsicha estendida que o diferencia e dará um toque Americano.
-    </ion-card-content>
-    <div class="ion-padding">
-      <ion-button color='dark' expand='block' (click)="buscar(cep)" >
-        Comprar
-        <ion-icon name="cash" slot="end"></ion-icon>
-      </ion-button>
-    </div>
-  </ion-card>
-
-  <!-- Terceiro Hot Dog -->
-
-  <ion-card>
-    <img src="../assets/imagem3.jpg" />
-    <ion-card-header>
-
-      <ion-card-title>Hot Dog Fit</ion-card-title>
-      <br>
-      <ion-card-subtitle color="danger">R$ 6,50</ion-card-subtitle>
-    </ion-card-header>
-
-    <ion-card-content>
-      Ótima opção para depois de um treino. Além de saúdavel muito nutrivo e delícioso.
-    </ion-card-content>
-    <div class="ion-padding">
-      <ion-button color='dark' expand='block' (click)="buscar(cep)" >
-        Comprar
-        <ion-icon name="cash" slot="end"></ion-icon>
-      </ion-button>
-    </div>
-  </ion-card>
+  
 
 </ion-content>

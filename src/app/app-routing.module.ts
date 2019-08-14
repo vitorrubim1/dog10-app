@@ -5,6 +5,7 @@ const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', loadChildren: './home/home.module#HomePageModule' },
   { path: 'comprar', loadChildren: './comprar/comprar.module#ComprarPageModule' },
+  { path: 'comprar/:id/:preco/:image', loadChildren: './comprar/comprar.module#ComprarPageModule'},
 ];
 
 @NgModule({
