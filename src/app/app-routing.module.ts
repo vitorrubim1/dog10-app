@@ -6,6 +6,7 @@ const routes: Routes = [
   { path: 'home', loadChildren: './home/home.module#HomePageModule' },
   { path: 'comprar', loadChildren: './comprar/comprar.module#ComprarPageModule' },
   { path: 'comprar/:id/:preco/:image', loadChildren: './comprar/comprar.module#ComprarPageModule'},
+  { path: 'add-dog', loadChildren: './add-dog/add-dog.module#AddDogPageModule' },
 ];
 
 @NgModule({
